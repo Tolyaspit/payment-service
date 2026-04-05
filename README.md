@@ -7,7 +7,7 @@ REST API сервис для управления платежами. Позво
 ## Quick Start
 
 ```bash
-git clone https://github.com/Tolyaspit/payment-service.git
+git clone https://github.com/TolegenKH/payment-service.git
 cd payment-service
 mvn spring-boot:run
 
@@ -166,4 +166,4 @@ payment-service/
 Postman коллекция находится в папке /postman.
 
  Автор
-GitHub: https://github.com/Tolyaspit
+GitHub: https://github.com/TolegenKH
