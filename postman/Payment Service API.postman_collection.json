@@ -1,0 +1,161 @@
+{
+  "info": {
+    "_postman_id": "2080df85-54dc-453b-b73f-d4e41d39b08d",
+    "name": "Payment Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37122583"
+  },
+  "item": [
+    {
+      "name": "Create Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "     {\n         \"amount\": 2000,             \n         \"currency\": \"CNY\",        \n         \"description\": \"Оплата заказа №123\",\n         \"clientId\": \"12345\"       \n     }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/payments",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Payment by ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/payments/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirm Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/payments/1/confirm",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "1",
+            "confirm"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cancel Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/payments/2/cancel",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "2",
+            "cancel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Client Payments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/clients/12345/payments",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "clients",
+            "12345",
+            "payments"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "value": ""
+    }
+  ]
+}
